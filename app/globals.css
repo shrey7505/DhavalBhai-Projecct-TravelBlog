@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1e3a5f;
+  --color-navy-light: #2a4f82;
+  --color-navy-dark: #142840;
+  --color-amber: #c9952d;
+  --color-amber-light: #e8b048;
+  --color-amber-dark: #a07220;
+  --color-cream: #faf8f4;
+  --color-warm-gray: #6b6660;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* Magazine-style typography */
+.prose-magazine h1,
+.prose-magazine h2,
+.prose-magazine h3,
+.prose-magazine h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #1e3a5f;
+  line-height: 1.25;
+}
+
+.prose-magazine h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #c9952d;
+}
+
+.prose-magazine h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-magazine p {
+  margin-bottom: 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.prose-magazine blockquote {
+  border-left: 4px solid #c9952d;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background: #faf8f4;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: #1e3a5f;
+}
+
+.prose-magazine ul,
+.prose-magazine ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.75rem;
+}
+
+.prose-magazine li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.prose-magazine strong {
+  color: #1e3a5f;
+  font-weight: 600;
+}
+
+.prose-magazine .tip-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #c9952d;
+  outline-offset: 2px;
+}
